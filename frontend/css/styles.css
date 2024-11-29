@@ -1,0 +1,96 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #000214, #00194f 40%, #003366 100%);
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 60px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.table-wrapper {
+    max-width: 90%; /* Limit the width of the table */
+    max-height: 450px; /* Limit the height of the table */
+    margin: 20px auto; /* Center the table on the page */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+    border-radius: 12px; /* Rounded edges */
+    background: rgba(0, 0, 0, 0.5); /* Optional background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px #00e5ff, 0 0 20px #00d4ff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+th {
+    background: rgba(0, 255, 231, 0.3);
+    color: #00ffe7;
+    font-weight: bold;
+    padding: 15px;
+    text-shadow: 0 0 5px #00ffe56a;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Position it at the top of the scrollable container */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+td {
+    background: rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tr:nth-child(even) td {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+tr:hover td {
+    background: rgba(0, 255, 231, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 231, 0.2);
+}
+
+/* Button styles */
+.action-button {
+    padding: 9px 18px;
+    font-size: 13px;
+    color: #e0f7ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 5px #00d4ff, 0 0 10px #0055ff;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.action-button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #00d4ff, 0 0 25px #0055ff;
+}
+
+/* Specific button styles */
+.action-button.add {
+    background: linear-gradient(140deg, #00ff7f, #007f5f);
+}
+
+.action-button.view {
+    background: linear-gradient(140deg, #007fff, #004f7f);
+}
+
+.action-button.edit {
+    background: linear-gradient(140deg, #ffa500, #7f5200);
+}
+
+.action-button.delete {
+    background: linear-gradient(140deg, #ff4500, #7f2100);
+}
