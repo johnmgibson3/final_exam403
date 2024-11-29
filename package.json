@@ -1,0 +1,19 @@
+{
+  "name": "final_exam",
+  "version": "1.0.0",
+  "description": "final exam for 403",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnmgibson3/final_exam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnmgibson3/final_exam/issues"
+  },
+  "homepage": "https://github.com/johnmgibson3/final_exam#readme"
+}
