@@ -1,4 +1,4 @@
-using Book.Data;
+using Book.Models;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -11,24 +11,24 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var dbPath = Path.Combine(AppContext.BaseDirectory, "Bookstore.sqlite");
+var dbPath = Path.Combine(AppContext.BaseDirectory, "EntertainmentAgencyExample.sqlite");
 
-builder.Services.AddDbContext<BookDbContext>(options =>
+builder.Services.AddDbContext<EntertainmentAgencyExampleContext>(options =>
     options.UseSqlite($"Data Source={dbPath}"));
 
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:3000")
-                .AllowCredentials()
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials()
+            .SetIsOriginAllowed(origin => true); // Handles redirects/credentials properly
+    });
 });
-
 var app = builder.Build();
 
 
