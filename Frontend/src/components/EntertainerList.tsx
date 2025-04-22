@@ -22,13 +22,13 @@ const EntertainersList: React.FC = () => {
   }, []);
 
   const fetchList = async () => {
-    const res = await fetch('https://localhost:5000/api/entertainers', { credentials: 'include' });
+    const res = await fetch('https://johngibsonfinal-eugrgmegaygcb5bu.centralus-01.azurewebsites.net/api/entertainers', { credentials: 'include' });
     setEntertainers(await res.json());
   };
 
   const handleAddSave = async () => {
     if (!newName.trim()) return;
-    await fetch('https://localhost:5000/api/entertainers', {
+    await fetch('https://johngibsonfinal-eugrgmegaygcb5bu.centralus-01.azurewebsites.net/api/entertainers', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',

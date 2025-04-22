@@ -24,7 +24,7 @@ const EntertainerDetails: React.FC = () => {
   // Fetch the full entity
   useEffect(() => {
     (async () => {
-      const res = await fetch(`https://localhost:5000/api/entertainers/${id}`, {
+      const res = await fetch(`https://johngibsonfinal-eugrgmegaygcb5bu.centralus-01.azurewebsites.net/api/entertainers/${id}`, {
         credentials: 'include'
       });
       if (res.ok) {
@@ -42,7 +42,7 @@ const EntertainerDetails: React.FC = () => {
   };
 
   const handleSave = async () => {
-    await fetch(`https://localhost:5000/api/entertainers/${id}`, {
+    await fetch(`https://johngibsonfinal-eugrgmegaygcb5bu.centralus-01.azurewebsites.net/api/entertainers/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -53,7 +53,7 @@ const EntertainerDetails: React.FC = () => {
   };
 
   const handleDelete = async () => {
-    await fetch(`https://localhost:5000/api/entertainers/${id}`, {
+    await fetch(`https://johngibsonfinal-eugrgmegaygcb5bu.centralus-01.azurewebsites.net/api/entertainers/${id}`, {
       method: 'DELETE',
       credentials: 'include',
     });

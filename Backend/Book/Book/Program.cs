@@ -22,7 +22,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend", policy =>
     {
         policy
-            .WithOrigins("http://localhost:3000")
+            .WithOrigins("http://localhost:3000", "https://green-meadow-007244c1e.6.azurestaticapps.net/")
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials()
