@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/77983df1-cb69-47fb-9cb6-11f641002ade/resourceGroups/appsvc_windows_centralus2/providers/Microsoft.Web/sites/JohnGibsonFinal",
+    "appService.deploySubpath": "Backend/Book/Book/publish"
+}
